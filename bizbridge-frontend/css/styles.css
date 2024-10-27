@@ -1,0 +1,179 @@
+/* styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.navbar-brand img {
+    width: 150px;
+}
+
+.hero {
+    background: linear-gradient(to bottom right, #6C63FF, #48D1CC);
+    color: white;
+}
+
+.hero .btn-primary {
+    background-color: #FF7F50;
+    border-color: #FF7F50;
+}
+
+#services h4 {
+    color: #6C63FF;
+}
+
+footer {
+    background-color: #333;
+}
+
+footer ul li a {
+    color: #fff;
+    font-size: 20px;
+}
+
+footer ul li a:hover {
+    color: #FF7F50;
+}
+
+/* styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+}
+
+.navbar {
+    background-color: #6C63FF;
+}
+
+.navbar-brand img {
+    width: 150px;
+}
+
+.tab-content {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-top: none;
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-tabs .nav-link {
+    font-size: 18px;
+    color: #6C63FF;
+}
+
+.nav-tabs .nav-link.active {
+    background-color: #6C63FF;
+    color: white;
+    border: none;
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+input[type="text"], input[type="email"], input[type="password"], input[type="tel"], select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease-in-out;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, input[type="tel"]:focus, select:focus {
+    border-color: #6C63FF;
+    box-shadow: 0 0 10px rgba(108, 99, 255, 0.2);
+}
+
+button[type="submit"] {
+    background-color: #6C63FF;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button[type="submit"]:hover {
+    background-color: #FF7F50;
+}
+/* Verifying and Success Messages */
+#verifyingDiv {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.verifying-message, .success-message {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.loader {
+    border: 5px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 5px solid #6C63FF;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Success Message */
+.success-message p {
+    font-size: 18px;
+    color: #28a745;
+}
+/* Dashboard Layout */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+}
+
+.navbar {
+    background-color: #6C63FF;
+}
+
+.nav-link.active {
+    background-color: #6C63FF;
+    color: white !important;
+}
+
+.card {
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-body h5 {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.btn-primary {
+    background-color: #6C63FF;
+    border: none;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #5A54D2;
+}

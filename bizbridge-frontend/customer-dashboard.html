@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&libraries=places"></script>
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <div class="header">
+            <h2>Welcome, <span id="customerName">[Customer Name]</span></h2>
+        </div>
+        
+        <div class="profile-section">
+            <h3>Your Profile</h3>
+            <div id="profileDetails">
+                <!-- Profile details to be filled dynamically -->
+            </div>
+            <button id="editProfileBtn">Edit Profile</button>
+            <div id="editProfileForm" style="display: none;">
+                <input type="text" id="newName" placeholder="Name">
+                <input type="email" id="newEmail" placeholder="Email">
+                <input type="text" id="newPhone" placeholder="Phone">
+                <button id="saveProfileBtn">Save Changes</button>
+            </div>
+        </div>
+
+        <div class="bookings-section">
+            <h3>Your Bookings</h3>
+            <ul id="bookingList">
+                <!-- Bookings will be dynamically populated -->
+            </ul>
+        </div>
+
+        <div class="search-section">
+            <h3>Search for Services</h3>
+            <input type="text" id="serviceSearch" placeholder="Enter service name">
+            <label for="minPrice">Min Price:</label>
+            <input type="number" id="minPrice">
+            <label for="rating">Rating:</label>
+            <select id="rating">
+                <option value="5">5 Stars</option>
+                <option value="4">4 Stars</option>
+                <option value="3">3 Stars</option>
+            </select>
+            <button id="searchServicesBtn">Search Nearby Services</button>
+            <ul id="searchResults">
+                <!-- Search results will be dynamically populated -->
+            </ul>
+        </div>
+
+        <div class="analytics-section">
+            <h3>Your Booking Trends</h3>
+            <canvas id="bookingChart"></canvas>
+        </div>
+        <div class="booking-section">
+            <h3>Available Services</h3>
+            <ul id="availableServicesList">
+                <!-- Available services will be dynamically populated -->
+            </ul>
+            <input type="date" id="bookingDate" placeholder="Select Date">
+            <input type="text" id="bookingTimeSlot" placeholder="Enter Time Slot">
+            <button id="bookServiceBtn">Book Service</button>
+        </div>
+        <div class="booking-management-section">
+            <h3>Your Bookings</h3>
+            <ul id="customerBookingsList">
+                <!-- Customer bookings will be dynamically populated -->
+            </ul>
+        </div>
+        
+        
+    </div>
+
+    <script src="app.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        // Authentication Check
+        if (!localStorage.getItem('token')) {
+            alert('You are not logged in. Redirecting to login page...');
+            window.location.href = 'signup.html'; // Redirect to signup page
+        }
+    </script>
+</body>
+</html>
